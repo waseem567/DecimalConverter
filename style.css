@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+}
+.litBlack{
+    background: rgb(24, 24, 24) !important;
+}
+.cw{
+    color: white;
+}
+.lightBlack{
+    background: #000 !important;
+}
+nav{
+    z-index: 1;
+}
+.fw_600{
+    font-weight: 600;
+    font-family: 'Varela Round', sans-serif;
+}
+.fv{
+    font-family: 'Varela Round', sans-serif;
+}
+#anchr{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width:700px) {
+    #w_100{
+        width: 100% !important;
+        text-align: center !important;
+    }
+    table.table{
+        width: 95% !important;
+    }
+}
+@media screen and (max-width:900px) {
+   
+    table.table{
+        width: 78% !important;
+    }
+}
+.btnResult button{
+    background-image: linear-gradient(#1FABFF, #035CFE);
+    color: white;
+}
+.btnResult2 button{
+    background-image: linear-gradient(#222121, #111010);
+    color: white;
+}
+.btnResult3 button{
+    background-image: linear-gradient(#DD5144, #DD5144);
+}
+
+/* #anchr:hover , #navInput{
+width: 30% !important;
+display: inline-block !important;
+} */
+/* #navInput{
+    display: none !important;
+    z-index: 1;
+} */
+#navInput{
+    border-radius: 20px;
+}
+.w_75{
+    width: 75%;
+}
+.spanSearch{
+    height: 40px;
+    top: -40px;
+    left: 83%;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.w_50{
+width: 50%;
+}
+.flexDirection{
+    justify-content: center;
+}
+@media screen and (max-width:700px) {
+    .pt_5{
+       padding-top: 30px;
+    }
+    .w_75{
+        width: 100% !important;
+    }
+    .w_50{
+        width: 92%;
+    }
+    .spanSearch{
+        left: 93% !important;
+    }
+    
+}
+@media screen and (max-width:650px) {
+    .spanSearch{
+       left: 92% !important;
+    }
+    .pagination{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width:420px) {
+    .pt_5{
+       padding-top: 45px;
+    }
+    .spanSearch{
+        left: 88% !important;
+     }
+     .w-50{
+         width: 95% !important;
+     }
+    
+}

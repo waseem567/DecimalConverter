@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <meta
+      name="description"
+      content="This is an example of a meta description. This will often show up in search results."
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>statistics</title>
+  </head>
+  <body>
+    <nav class="nav position-fixed start-0 top-0 w-100 py-1 lightBlack">
+      <div class="w-25" id="w_100">
+        <a id="anchr" class="fw_600 fs-4" href="#">Decima Alter</a>
+      </div>
+      <div class="w-75 text-end px-md-5 pt-1" id="w_100">
+        <a href="#" id="anchr" class="fw_600 mx-2"
+          >All Tools <i class="fas fa-chevron-down"></i
+        ></a>
+        <a href="#" id="anchr" class="fw_600 mx-2"
+          >Home <i class="fas fa-home"></i
+        ></a>
+        <a href="#" id="anchr" class="fw_600 mx-2"
+          >About <i class="fas fa-address-card"></i
+        ></a>
+        <a href="#" id="anchr" class="fw_600 mx-2"
+          >Contact <i class="fas fa-id-card-alt"></i
+        ></a>
+        <a href="#" id="anchr" class="fw_600 mx-2"
+          >English<i class="fas fa-globe mx-2"></i
+        ></a>
+      </div>
+    </nav>
+    <div class="litBlack">
+      <div
+        class="position-relative mt-5 pt_5 w_50 mx-auto text-center litBlack"
+      >
+        <input
+          class="
+            fw_600
+            text-white
+            fv
+            w_75
+            py-2
+            px-2
+            border-0
+            lightBlack
+            shadow-sm
+          "
+          type="text"
+          placeholder="Enter to search..."
+          id="navInput"
+        />
+        <span
+          class="
+            d-flex
+            justify-content-center
+            align-items-center
+            position-relative
+            bg-primary
+            text-white
+            spanSearch
+          "
+          ><i class="fal fa-search"></i
+        ></span>
+      </div>
+    </div>
+    <nav class="w-100 d-flex flexDirection litBlack">
+      <ul class="pagination pagination-sm">
+        <li class="page-item" aria-current="page">
+          <span class="page-link py-2 fw_600 fv bg-info text-white"
+            >Decimal to Binary Conversion</span
+          >
+        </li>
+        <li class="page-item">
+          <a
+            class="page-link py-2 fw_600 fv bg-warning text-white"
+            href="#stepTwo"
+            >Decimal to Octal Conversion</a
+          >
+        </li>
+        <li class="page-item">
+          <a
+            class="page-link py-2 fw_600 fv bg-danger text-white"
+            href="#stepThree"
+            >Decimal to Hexa Decimal Conversion</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid litBlack">
+      <div class="container mt-3">
+        <div
+          class="border fw_600 text-center fs-5 py-2 border-bottom-0 text-white"
+        >
+          Converter
+        </div>
+        <div class="alert alert-info text-center px-0 py-2 mb-5" role="alert">
+          <div class="text-center fw_600" id="stepOne">Decimal to Binary</div>
+          <p class="text-center px-5 fv mx-auto w-75">
+            In the conversion of decimal to binary, we have to change a base 10
+            number into a base 2 number with the help of some simple techniques.
+            For instance; in case '1210' is a decimal number, then its equal
+            binary number will '11002'. Let us calculate decimal to binary.
+          </p>
+        </div>
+        <div class="border text-center border-top-0 border-bottom-0 my-0">
+          <div class="text-center fw_600 py-3 text-white">
+            Enter Decimal number to Convert in Binary number
+          </div>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            class="
+              py-2
+              w-50
+              border-info border
+              fw_600
+              enteredDec
+              lightBlack
+              text-white
+            "
+            placeholder="Enter decimal value...."
+            id="dec1"
+          />
+          <div class="text-center btnResult py-3">
+            <button
+              onclick="binaryCalc()"
+              type="button"
+              class="px-4 py-2 border-0 fw_600 shadow-sm"
+            >
+              Convert into Binary
+            </button>
+          </div>
+
+          <div class="text-center fw_600 text-white">Result</div>
+          <div class="text-center">
+            <table class="table mx-auto w-50 fw_600">
+              <thead>
+                <th class="border text-white">Decimal value</th>
+                <th class="border text-white">Binary value</th>
+              </thead>
+              <tr>
+                <td class="showDec border py-4 text-white"></td>
+                <td class="showBin border py-4 text-white"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div
+          class="alert alert-warning text-center px-0 py-2 my-5"
+          role="alert"
+        >
+          <div class="text-center fw_600" id="stepTwo">Decimal to octal</div>
+          <p class="text-center px-5 fv mx-auto w-75">
+            Decimal system is most familiar number system to the general public.
+            It is base 10 which has only 10 symbols − 0, 1, 2, 3, 4, 5, 6, 7, 8
+            and 9. Whereas octal system is one of the number systems to
+            represent numbers. It is base 8 which has only 8 symbols − 0, 1, 2,
+            3, 4, 5, 6, and 7..
+          </p>
+        </div>
+        <div class="border text-center border-top-0 border-bottom-0 my-0">
+          <div class="text-center fw_600 py-3 text-white">
+            Enter Decimal number to Convert in Octal number
+          </div>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            class="
+              py-2
+              w-50
+              border-warning border
+              fw_600
+              enteredDec
+              text-white
+              lightBlack
+            "
+            placeholder="Enter decimal value...."
+            id="dec2"
+          />
+          <div class="text-center btnResult2 py-3">
+            <button
+              onclick="octalCalc()"
+              type="button"
+              class="px-4 py-2 border-0 fw_600 shadow-sm"
+            >
+              Convert into Octal
+            </button>
+          </div>
+
+          <div class="text-center fw_600 text-white">Result</div>
+          <div class="text-center">
+            <table class="table mx-auto w-50 fw_600">
+              <thead>
+                <th class="border text-white">Decimal value</th>
+                <th class="border text-white">Octal value</th>
+              </thead>
+              <tr>
+                <td class="showDec2 border py-4 text-white"></td>
+                <td class="showOct border py-4 text-white"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="alert alert-danger text-center px-0 py-2 my-5" role="alert">
+          <div class="text-center fw_600" id="stepThree">
+            Decimal to HexaDecimal
+          </div>
+          <p class="text-center px-5 fv mx-auto w-75">
+            Decimal system is most familiar number system to the general public.
+            It is base 10 which has only 10 symbols − 0, 1, 2, 3, 4, 5, 6, 7, 8
+            and 9. Whereas octal system is one of the number systems to
+            represent numbers. It is base 8 which has only 8 symbols − 0, 1, 2,
+            3, 4, 5, 6, and 7..
+          </p>
+        </div>
+        <div class="border text-center border-top-0 border-bottom-0 my-0">
+          <div class="text-center fw_600 py-3 text-white">
+            Enter Decimal number to Convert in HexaDecimal number
+          </div>
+          <input
+            type="number"
+            min="0"
+            step="1"
+            class="
+              py-2
+              w-50
+              border-danger border
+              fw_600
+              enteredDec
+              text-white
+              lightBlack
+            "
+            placeholder="Enter decimal value...."
+            id="dec3"
+          />
+          <div class="text-center btnResult3 py-3">
+            <button
+              onclick="hexaCalc()"
+              type="button"
+              class="px-4 py-2 border-0 fw_600 text-white rounded shadow-sm"
+            >
+              Convert into HexaDecimal
+            </button>
+          </div>
+
+          <div class="text-center fw_600 text-white">Result</div>
+          <div class="text-center">
+            <table class="table mx-auto w-50 fw_600">
+              <thead>
+                <th class="border text-white">Decimal value</th>
+                <th class="border text-white">HexaDecimal value</th>
+              </thead>
+              <tr>
+                <td class="showDec3 border py-4 text-white"></td>
+                <td class="showHex border py-4 text-white"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- carousel  -->
+    <div class="owl-carousel owl-theme pt-5 litBlack">
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="1.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="2.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="3.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="4.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="5.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="6.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="1.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="6.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="5.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="4.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="3.png" alt="carousel img"
+        /></a>
+      </div>
+      <div class="item mx-3">
+        <a title="carousel items" href="#"
+          ><img src="2.png" alt="carousel img"
+        /></a>
+      </div>
+    </div>
+    <div class="litBlack text-white text-center fw_600 fv py-2">
+      CopyRightreserved(2021 - 2023)
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="script.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
